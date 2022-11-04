@@ -31,8 +31,10 @@ class RegisterController extends Controller
         ]);
         // Register success
 
-        //Sign in
+        //Sign in user after register
+        auth()->attempt($request->only('email', 'password'));
 
+        //Redirect user to dashboard after sign in
         return redirect()->route('dashboard');
     }
 }
