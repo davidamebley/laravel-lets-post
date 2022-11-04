@@ -7,10 +7,34 @@
     @vite('resources/css/app.css')
     <title>Let's Post</title>
 </head>
-<body>
-<h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+<body class="bg-gray-200" >
+    <nav class="p-6 bg-white flex justify-between mb-6">
+        <ul class="flex items-center">
+            <li>
+                <a href="" class="p-3">Home</a>
+            </li>
+            <li>
+                <a href="" class="p-3">Dashboard</a>
+            </li>
+            <li>
+                <a href="" class="p-3">Post</a>
+            </li>
+        </ul>
+        <ul class="flex items-center">
+            <li>
+                <a href="" class="p-3">David Amebley</a>
+            </li>
+            <li>
+                <a href="" class="p-3">Login</a>
+            </li>
+            <li>
+                <a href="" class="p-3">Register</a>
+            </li>
+            <li>
+                <a href="" class="p-3">Log out</a>
+            </li>
+        </ul>
+    </nav>
     @yield('content')
 </body>
 </html>
