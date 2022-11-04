@@ -19,5 +19,7 @@ class RegisterController extends Controller
             'email' => 'required|email|max:255',
             'password' => 'required|confirmed'
         ]);
+
+        dd('store');
     }
 }
