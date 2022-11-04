@@ -8,6 +8,8 @@ use App\Http\Controllers\Auth\RegisterController;
 | Web Routes
 |--------------------------------------------------------------------------
 */
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);
 
