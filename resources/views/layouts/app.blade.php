@@ -24,7 +24,7 @@
             <!-- Display this block if user signed in -->
             @auth
             <li>
-                <a href="" class="p-3">David Amebley</a>
+                <a href="" class="p-3">{{ auth()->user()->name }}</a>
             </li>
             <li>
                 <!-- We set up our logout route this way to prevent csrf -->
