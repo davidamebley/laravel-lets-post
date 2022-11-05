@@ -23,10 +23,12 @@ class LoginController extends Controller
             'password' => 'required',
         ]);
 
-        // If login failed
-        if (!auth()->attempt($request->only('email', 'password'))) {
+        // Attempt login. $request->remember [optional] is for Remember me functionality
+        if (!auth()->attempt($request->only('email', 'password'), $request->remember)) {
+            // If login failed
             return back()->with('status', 'Invalid login details');
         }
+        // If login success
         return redirect()->route('dashboard');
     }
 }
