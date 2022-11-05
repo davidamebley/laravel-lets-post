@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
+    public function __construct(){
+        $this->middleware(['guest']);    //Only unauthenticated users can access this page and features
+    }
+
     public function index(){
         //Show sign in page
         return view('auth.login');
