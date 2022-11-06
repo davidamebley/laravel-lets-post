@@ -41,6 +41,8 @@
                                 @csrf
                                 <button type="submit" class="text-blue-500">Unlike</button>
                             </form>
+                            <!-- Add the Likes counter -->
+                            <span>{{ $post->likes->count() }}  {{ Str::plural('like', $post->likes->count()) }}</span>
                         </div>
 
                     </div>
