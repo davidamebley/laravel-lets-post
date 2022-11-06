@@ -19,7 +19,6 @@ class PostController extends Controller
         $this->validate($request, [
             'body' => 'required'
         ]);
-
         // We want to create a post through a user
         $request->user()->posts()->create($request->only('body')); //Laravel uses this relationship setup to automatically fill in the user_id 
 
