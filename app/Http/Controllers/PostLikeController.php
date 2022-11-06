@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class PostLikeController extends Controller
 {
+    public function __construct(){
+        $this->middleware(['auth']);    //Prevent unauthenticated users from access
+    }
     //reate a like for a post
     public function store(Post $post, Request $request){
 
