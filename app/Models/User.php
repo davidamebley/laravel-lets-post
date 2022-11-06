@@ -47,4 +47,9 @@ class User extends Authenticatable
     public function posts(){
         return $this->hasMany(Post::class);
     }
+
+    // Set up Eloquent Relationship to tell Laravel that a User has many likes
+    public function likes(){
+        return $this->hasMany(Like::class);
+    }
 }
