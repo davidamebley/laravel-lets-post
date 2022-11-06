@@ -42,4 +42,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // Set up Eloquent Relationship to tell Laravel that a User has many posts
+    public function posts(){
+        return $this->hasMany(Post::class);
+    }
 }
