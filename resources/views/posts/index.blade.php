@@ -40,8 +40,10 @@
                                     <button type="submit" class="text-blue-500">Like</button>
                                 </form>
                             @endif
-                                <form action="" method="post" class="mr-1">
+                                <form action="{{ route('posts.likes', $post->id) }}" method="post" class="mr-1">
                                     @csrf
+                                    <!-- Use method spoofing here -->
+                                    @method('DELETE')
                                     <button type="submit" class="text-blue-500">Unlike</button>
                                 </form>
                             <!-- Add the Likes counter -->
