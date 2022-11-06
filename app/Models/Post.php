@@ -15,6 +15,11 @@ class Post extends Model
         'body'
     ];
 
+    public function likedBy(User $user){
+        // Using the relationship b/n Post and Like, find if the likes a post has contains any user id being checked
+        return $this->likes->contains('user_id', $user->id);
+    }
+
     /** Get the user that owns the Post
      *
      */
@@ -24,6 +29,7 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
 
+    // Create an Eloquent relationship between post and Like
     public function likes(){
         return $this->hasMany(Like::class);
     }

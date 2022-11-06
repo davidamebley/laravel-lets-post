@@ -9,6 +9,11 @@ class PostLikeController extends Controller
 {
     //reate a like for a post
     public function store(Post $post, Request $request){
+
+        if ($post->likedBy($request->user())) {
+            return response(null, 409);     //Conflict http code
+        }
+
         // We are creating a Like through a post. Laravel automatically fills the post_id section of the like for us because we created it through a post
         $post->likes()->create([
             'user_id' => $request->user()->id,
