@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function index(){
-        $posts = Post::query()->paginate(2);   //Using pagination from Laravel
+        $posts = Post::query()->paginate(20);   //Using pagination from Laravel
 
         return view('posts.index', [
             'posts' => $posts
