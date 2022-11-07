@@ -27,7 +27,7 @@
             <!-- Iterate through Posts and display them -->
             @if ($posts->count())
                 @foreach ($posts as $post)
-                    
+                    <x-post :post="$post"/>     <!-- Use a component and prop -->
                 @endforeach
 
                 <!-- Output pagination links -->
