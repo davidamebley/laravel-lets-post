@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('likes', function (Blueprint $table) {
-            //
+            $table->softDeletes();
         });
     }
 
@@ -26,7 +26,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('likes', function (Blueprint $table) {
-            //
+            $table->dropSoftDeletes();
         });
     }
 };
