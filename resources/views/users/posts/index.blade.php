@@ -12,7 +12,7 @@
                 <!-- Iterate through Posts and display them -->
                 @if ($posts->count())
                     @foreach ($posts as $post)
-                        <x-post :post=$post/>     <!-- Pass a prop to the {Post component} -->
+                        <x-post :post=$post/>   <!-- Pass a prop to the {Post component} -->
                     @endforeach
 
                     <!-- Output pagination links -->

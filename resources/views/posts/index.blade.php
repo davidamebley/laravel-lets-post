@@ -24,7 +24,20 @@
             </form>
             @endauth
 
-            
+            <!-- All Posts here -->
+            <div>
+                <!-- Iterate through Posts and display them -->
+                @if ($posts->count())
+                    @foreach ($posts as $post)
+                        <x-post :post=$post/>   <!-- Pass a prop to the {Post component} -->
+                    @endforeach
+
+                    <!-- Output pagination links -->
+                    {{ $posts->links() }}
+                @else
+                    <p>There are no posts to show</p>
+                @endif
+            </div>
         </div>
     </div>
 @endsection
