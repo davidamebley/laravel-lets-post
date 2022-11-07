@@ -25,4 +25,9 @@ class PostController extends Controller
 
         return back();
     }
+
+    // Delete a post
+    public function destroy(Post $post){
+        dd($post);
+    }
 }
