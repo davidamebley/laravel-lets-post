@@ -54,4 +54,9 @@ class User extends Authenticatable
     public function likes(){
         return $this->hasMany(Like::class);
     }
+
+    // Set up Eloquent Relationship between user and all likes they have reveived
+    public function receivedLikes(){
+        return $this->hasManyThrough(Like::class, Post::class);
+    }
 }
