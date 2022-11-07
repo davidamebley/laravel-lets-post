@@ -24,8 +24,11 @@ class PostLikeController extends Controller
             'user_id' => $request->user()->id,
         ]);
 
-        // Mail after Post Liked
-        Mail::to($post->user)->send(new PostLiked(auth()->user(), $post));  //Passing these vals to the PostLiked constructor
+        //Preventing sending multiple mails when one unlikes and re-likes. We want to check if this Like has NOT previously been deleted (i.e., by Unliking). That way, we know this is the first time clicking Like. 
+        if (!$post->likes()->onlyTrashed()->where('user_id', $request->user()->id)->count()) {
+            // Mail after Post Liked
+            Mail::to($post->user)->send(new PostLiked(auth()->user(), $post));  //Passing these vals to the PostLiked constructor
+        }
 
         return back();
     }
