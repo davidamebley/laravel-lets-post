@@ -20,11 +20,6 @@ class Post extends Model
         return $this->likes->contains('user_id', $user->id);
     }
 
-    public function ownedBy(User $user){
-        // Using the relationship b/n Post and User, find if the post belongs to current user
-        return $user->id === $this->user_id;
-    }
-
     /** Get the user that owns the Post
      *
      */

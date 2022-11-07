@@ -33,19 +33,17 @@
                         <p class="mb-2">{{ $post->body }}</p>
 
                         <!-- Prevent unauth users from accessing -->
-                        @auth
-                            <!-- Delete a Post -->
-                            @if ($post->ownedBy(auth()->user()))
-                                <div>
-                                    <form action="{{ route('posts.destroy', $post) }}" method="post" class="mr-1">
-                                        @csrf
-                                        <!-- Use method spoofing here -->
-                                        @method('DELETE')
-                                        <button type="submit" class="text-blue-500">Delete</button>
-                                    </form>
-                                </div>
-                            @endif
-                        @endauth
+                        <!-- @auth -->
+                        <!-- Delete a Post -->
+                        @can('delete', $post)   <!-- Delete by Cheking our created Policy first -->
+                            <form action="{{ route('posts.destroy', $post) }}" method="post" class="mr-1">
+                                @csrf
+                                <!-- Use method spoofing here -->
+                                @method('DELETE')
+                                <button type="submit" class="text-blue-500">Delete</button>
+                            </form>
+                        @endcan
+                        <!-- @endauth -->
 
                         <div class="flex items-center">
                             <!-- Prevent unauth users from accessing -->
