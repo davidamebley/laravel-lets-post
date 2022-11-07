@@ -64,6 +64,7 @@
                                 @endif
                             @endauth
                             <!-- Add the Likes counter -->
+                            
                             <span>{{ $post->likes->count() }}  {{ Str::plural('like', $post->likes->count()) }}</span>
                         </div>
 

@@ -20,7 +20,7 @@ Route::get('/', function(){
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-Route::get('/users/{user}/posts', [UserPostController::class, 'index'])->name('users.posts');
+Route::get('/users/{user:username}/posts', [UserPostController::class, 'index'])->name('users.posts');
 
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
