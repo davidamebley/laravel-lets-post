@@ -4,7 +4,7 @@
     <a href="{{ route('users.posts', $post->user) }}" class="font-bold">{{ $post->user->name }}</a> 
     <span class="text-gray-500 text-sm">
         &bull;
-         <a href="{{ route('posts.show', $post) }}">
+         <a href="{{ route('posts.show', $post) }}">    <!-- Click this link to view a single post in a separate view -->
             {{ $post->created_at->diffForHumans() }}
         </a>
     </span>
