@@ -1,7 +1,13 @@
 @props(['post' => $post])   <!-- Define our props (the vals we want to retrieve from the parent component) -->
 
 <div class="mb-4">
-    <a href="{{ route('users.posts', $post->user) }}" class="font-bold">{{ $post->user->name }}</a> <span class="text-gray-600 text-sm">{{ $post->created_at->diffForHumans() }}</span>
+    <a href="{{ route('users.posts', $post->user) }}" class="font-bold">{{ $post->user->name }}</a> 
+    <span class="text-gray-500 text-sm">
+        &bull;
+         <a href="{{ route('posts.show', $post) }}">
+            {{ $post->created_at->diffForHumans() }}
+        </a>
+    </span>
 
     <p class="mb-2">{{ $post->body }}</p>
 
