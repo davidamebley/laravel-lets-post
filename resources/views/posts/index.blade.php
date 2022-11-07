@@ -32,13 +32,20 @@
 
                         <p class="mb-2">{{ $post->body }}</p>
 
-                        <!-- Delete a Post -->
-                        <form action="{{ route('posts', $post) }}" method="post" class="mr-1">
-                            @csrf
-                            <!-- Use method spoofing here -->
-                            @method('DELETE')
-                            <button type="submit" class="text-blue-500">Delete</button>
-                        </form>
+                        <!-- Prevent unauth users from accessing -->
+                        @auth
+                            <!-- Delete a Post -->
+                            @if ($post->ownedBy(auth()->user()))
+                                <div>
+                                    <form action="{{ route('posts.destroy', $post) }}" method="post" class="mr-1">
+                                        @csrf
+                                        <!-- Use method spoofing here -->
+                                        @method('DELETE')
+                                        <button type="submit" class="text-blue-500">Delete</button>
+                                    </form>
+                                </div>
+                            @endif
+                        @endauth
 
                         <div class="flex items-center">
                             <!-- Prevent unauth users from accessing -->
