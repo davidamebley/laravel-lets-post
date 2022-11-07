@@ -9,7 +9,7 @@ class PostController extends Controller
 {
     public function index(){
         // The 'with(['user', 'liks'])' snippet enables eager loading of the queries to prevent executing separe queries for the posts and the likes
-        $posts = Post::with(['user', 'likes'])->paginate(20);   //Using pagination from Laravel
+        $posts = Post::latest()->with(['user', 'likes'])->paginate(20);   //Using pagination from Laravel
 
         return view('posts.index', [
             'posts' => $posts
