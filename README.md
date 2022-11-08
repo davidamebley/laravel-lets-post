@@ -31,6 +31,7 @@ Use the following command:
 - Execute <code>npm run dev</code> in a new terminal to start the app in development mode
 
 <hr />
+
 - Login
 <img src="https://github.com/davidamebley/laravel-lets-post/blob/60ef46a49e3fa2806d4ab45a9c6ce4eea17297c4/sign%20in.png"/>
 
