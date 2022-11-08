@@ -1,8 +1,7 @@
 # Bookmark-Manager Backend Application (with Laravel)
 
 ## Description
-This web application was designed to be used with some friends to post anything on our minds, especially gossips. Please have some fun sometimes :D
-
+This web application was designed to be used with some friends to post anything on our minds, especially gossips. Please let's release some stress
 ## Installation
 - To run this application, first make sure you have [PHP](https://www.php.net/manual/en/install.php), [Laravel](https://laravel.com/docs/9.x/installation), and [Composer](https://getcomposer.org/download/) installed. **Note:** You have to install Composer first, then you can install Laravel.
 - The database used was created with Postgresql. Please make sure you have it installed or follow the instructions [here](https://www.postgresql.org/download/) to install it. You may use any database of your choice too.
