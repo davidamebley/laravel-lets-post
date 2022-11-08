@@ -35,10 +35,10 @@ Use the following command:
 <img src="https://github.com/davidamebley/laravel-lets-post/blob/60ef46a49e3fa2806d4ab45a9c6ce4eea17297c4/sign%20in.png"/>
 
 - Posts 
-<img src="" />
+<img src="https://github.com/davidamebley/laravel-lets-post/blob/main/posts.png" />
 
 - Single user posts history
-<img src="" />
+<img src="https://github.com/davidamebley/laravel-lets-post/blob/main/single%20user%20posts.png" />
 
 ### Tech stack:
 - <strong>Language:</strong> PHP
