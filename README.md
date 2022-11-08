@@ -1,4 +1,4 @@
-# Bookmark-Manager Backend Application (with Laravel)
+# Let's Post (with Laravel)
 
 ## Description
 This web application was designed to be used with some friends to post anything on our minds, especially gossips. Please let's release some stress
@@ -30,6 +30,15 @@ Use the following command:
     - Running this command starts the application server and runs the app at: http://127.0.0.1:8000
 - Execute <code>npm run dev</code> in a new terminal to start the app in development mode
 
+<hr />
+- Login
+<img src="https://github.com/davidamebley/laravel-lets-post/blob/60ef46a49e3fa2806d4ab45a9c6ce4eea17297c4/sign%20in.png"/>
+
+- Posts 
+<img src="" />
+
+- Single user posts history
+<img src="" />
 
 ### Tech stack:
 - <strong>Language:</strong> PHP
