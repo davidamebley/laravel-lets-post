@@ -28,7 +28,6 @@ Use the following command:
 - After running your migration successfully, run the following command:
 <br /> <code> php artisan serve </code>
     - Running this command starts the application server and runs the app at: http://127.0.0.1:8000
-- Execute <code>npm run dev</code> in a new terminal to start the app in development mode
 
 <hr />
 
