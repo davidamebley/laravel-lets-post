@@ -48,7 +48,7 @@ Use the following command:
 ### Tech stack:
 - <strong>Language:</strong> PHP
 - <strong>Framework:</strong> Laravel
-- <strong>Styling:</strong> Laravel Vite and Tailwind
+- <strong>Styling:</strong> Tailwind CSS
 - <strong>Emailing users of liked posts:</strong> Mailtrap
 - <strong>Database:</strong> PostgreSQL
 
